@@ -92,7 +92,6 @@ set service dns forwarding system
 set service ssh listen-address '172.16.150.2'
 set system host-name 'fw01-aidan'
 set system name-server '10.0.17.2'
-set system syslog host 172.16.50.5 facility authpriv
 set zone-policy zone DMZ from LAN firewall name 'LAN-to-DMZ'
 set zone-policy zone DMZ from WAN firewall name 'WAN-to-DMZ'
 set zone-policy zone DMZ interface 'eth1'
