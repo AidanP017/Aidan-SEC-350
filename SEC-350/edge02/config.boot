@@ -128,7 +128,7 @@ interfaces {
     ethernet eth2 {
         address 172.16.150.2/24
         description AIDAN-LAN
-        hw-id 00:50:56:a1:74:f4
+        hw-id 00:50:56:a1:e7:5c
     }
     loopback lo {
     }
