@@ -10,7 +10,7 @@ interfaces {
         hw-id "00:50:56:a1:b5:80"
     }
     ethernet eth2 {
-        hw-id "00:50:56:a1:e0:fe"
+        hw-id "00:50:56:a1:74:f4"
         address "172.16.150.2/24"
         description "AIDAN-LAN"
     }
