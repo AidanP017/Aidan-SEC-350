@@ -241,7 +241,7 @@ system {
             speed 115200
         }
     }
-    host-name edge02-aidan
+    host-name edge01-aidan
     login {
         user vyos {
             authentication {
