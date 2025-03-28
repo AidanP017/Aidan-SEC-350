@@ -118,17 +118,17 @@ interfaces {
     ethernet eth0 {
         address 10.0.17.162/24
         description AIDAN-WAN
-        hw-id 00:50:56:a1:5b:03
+        hw-id 00:50:56:a1:d5:c0
     }
     ethernet eth1 {
         address 172.16.50.2/29
         description AIDAN-DMZ
-        hw-id 00:50:56:a1:b5:80
+        hw-id 00:50:56:a1:c3:68
     }
     ethernet eth2 {
         address 172.16.150.2/24
         description AIDAN-LAN
-        hw-id 00:50:56:a1:e7:5c
+        hw-id 00:50:56:a1:11:d2
     }
     loopback lo {
     }
