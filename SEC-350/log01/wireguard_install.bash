@@ -8,6 +8,8 @@
 
 # Installing Wireguard packages
 curl -Lo /etc/yum.repos.d/wireguard.repo https://copr.fedorainfracloud.org/coprs/jdoss/wireguard/repo/epel-7/jdoss-wireguard-epel-7.repo
+sudo yum clean all
+sudo yum makecache
 
 sudo yum update -y
 sudo yum install wireguard-dkms wireguard-tools -y
@@ -46,10 +48,16 @@ Address = 10.10.10.2/24
 
 [Peer]
 PublicKey = $(sudo cat /etc/wireguard/srvkey-public)
-Allowed IPs = 0.0.0.0/0
+Allowed IPs = 10.10.10.1/24
 Endpoint = 10.0.17.162:51820
 PersistentKeepalive = 25
 EOF
+
+# Firewalld config
+sudo firewall-cmd --permanent --zone=public --add-port=51820/udp
+sudo firewall-cmd --permanent --add-interface=wg0 --zone=internal
+sudo firewall-cmd --permanent --zone=internal --add-masquerade
+sudo firewall-cmd --reload
 
 # Start Wireguard
 sudo wg-quick up wg0
